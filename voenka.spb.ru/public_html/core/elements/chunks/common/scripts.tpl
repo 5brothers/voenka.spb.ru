@@ -1,12 +1,4 @@
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-<script src="{$_modx->config.assets_url}templates/js/bx/jquery.bxslider.min.js"></script>
-<script src="{$_modx->config.assets_url}templates/js/jquery.magnify.js"></script>
-<script src="{$_modx->config.assets_url}templates/js/fancybox/source/jquery.fancybox.pack.js"></script>
-<script src="{$_modx->config.assets_url}templates/js/jquery.easy-autocomplete.min.js"></script>
-<script src="{$_modx->config.assets_url}templates/js/jquery.bxslider/jquery.bxslider.min.js"></script>
-<script src="{$_modx->config.assets_url}templates/js/jquery.sticky.js"></script>
-<script src="{$_modx->config.assets_url}templates/js/remodal.min.js"></script>
-<script src="{$_modx->config.assets_url}templates/js/scripts.js"></script>
 {ignore}
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">

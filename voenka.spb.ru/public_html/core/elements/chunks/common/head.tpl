@@ -16,19 +16,26 @@
         'minifyCss' => 1,
 	'minifyJs' => 1,
 	'registerJs' => 'default',
-	'registerCss' => 'placeholder',
+	'registerCss' => 'default',
+        'jsSources' => '
+            assets/templates/js/bx/jquery.bxslider.min.js,
+            assets/templates/js/jquery.easy-autocomplete.min.js,
+            assets/templates/js/jquery.bxslider/jquery.bxslider.min.js,
+            assets/templates/js/jquery.sticky.js,
+            assets/templates/js/remodal.min.js,
+            assets/templates/js/scripts.js
+        ',
 	'cssSources' => 'assets/templates/fa/css/font-awesome.min.css,
-        templates/oldcss/normalize.css,
-        templates/oldcss/stylesheet.css,
-        templates/oldcss/drstylesheet.css,
-        templates/oldcss/responsive.css,
-        assets/templates/js/fancybox/source/jquery.fancybox.css,
+        assets/templates/oldcss/normalize.css,
+        assets/templates/oldcss/stylesheet.css,
+        assets/templates/oldcss/drstylesheet.css,
+        assets/templates/oldcss/responsive.css,
         assets/templates/oldcss/remodal.css,
         assets/templates/oldcss/remodal-default-theme.css,
         assets/templates/oldcss/easy-autocomplete.min.css,
         assets/templates/js/jquery.bxslider/jquery.bxslider.css'
     ])}
-    {$_modx->getPlaceholder('MinifyX.css')}
+    [[+MinifyX.css]]
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     
     {include 'file:chunks/common/fav.tpl'}
