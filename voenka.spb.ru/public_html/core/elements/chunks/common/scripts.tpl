@@ -3,58 +3,11 @@
 <script src="{$_modx->config.assets_url}templates/js/jquery.magnify.js"></script>
 <script src="{$_modx->config.assets_url}templates/js/fancybox/source/jquery.fancybox.pack.js"></script>
 <script src="{$_modx->config.assets_url}templates/js/jquery.easy-autocomplete.min.js"></script>
-
+<script src="{$_modx->config.assets_url}templates/js/jquery.bxslider/jquery.bxslider.min.js"></script>
+<script src="{$_modx->config.assets_url}templates/js/jquery.sticky.js"></script>
+<script src="{$_modx->config.assets_url}templates/js/remodal.min.js"></script>
+<script src="{$_modx->config.assets_url}templates/js/scripts.js"></script>
 {ignore}
-<script>
-    function GetIEVersion() {
-  var sAgent = window.navigator.userAgent;
-  var Idx = sAgent.indexOf("MSIE");
-
-  // If IE, return version number.
-  if (Idx > 0) 
-    return parseInt(sAgent.substring(Idx+ 5, sAgent.indexOf(".", Idx)));
-
-  // If IE 11 then look for Updated user agent string.
-  else if (!!navigator.userAgent.match(/Trident\/7\./)) 
-    return 11;
-
-  else
-    return 0; //It is not IE
-}
-    $(document).ready(function () {
-        $('.filter_title').on('click', function () {
-            $(this).siblings('.filter-row').toggle('fast');
-            $(this).find('.fa-chevron-right').toggleClass('chevronOpened');
-        });
-        $('#mainImage').on('click', function(){
-        $.fancybox.open([
-            {href: $(this).attr('href')}
-        ]);
-    });
-    $('#city').on('keydown', function(){ 
-        var id = $(this).data('id'),
-            words = $(this).val();
-            action = 'getCity';
-             $.post('ajax.php', { action: action,words:words }, function(data) { 
-                //var data = JSON.parse(data);
-                console.log(data);
-	});
-    });
-    if (GetIEVersion() === 0){
-        var $zoom = $('.zoom').magnify();
-    }
-    $('.thumbnail').on('click',function(){
-        var thumb = $(this).data('image'),
-            zoom = $(this).data('zoom-image');
-        $("#mainImage").attr('href',zoom);
-        $("#mainImage img").attr('src',thumb);
-        $zoom.destroy();
-        $zoom.magnify();
-        return false;
-        });
-
-    });
-</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function (d, w, c) {
@@ -104,7 +57,7 @@
                 //--></script><!--/LiveInternet-->
 </noindex>
 <script>
-                    (function(i, s, o, g, r, a, m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (function(i, s, o, g, r, a, m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)}, i[r].l = 1 * new Date();
                     a = s.createElement(o),
                             m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
