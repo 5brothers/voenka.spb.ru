@@ -1317,3 +1317,7 @@ input[type="text"][disabled="disabled"]{
     font-size: 1rem;
     text-decoration: underline;
 }
+
+.jGrowl{
+    z-index: 10002;
+}

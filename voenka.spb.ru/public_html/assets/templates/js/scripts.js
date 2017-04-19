@@ -39,3 +39,12 @@ $(document).ready(function () {
     $("#city").easyAutocomplete(options);
 
 });
+
+$(document).on('af_complete', function(event, response) {
+    // Если у формы определённый id
+    console.log('должна закрыться');
+    var inst = $('[data-remodal-id="orderModal"]').remodal();
+    // Скрываем её!
+    inst.close();
+    // Иначе печатаем в консоль весь ответ
+});

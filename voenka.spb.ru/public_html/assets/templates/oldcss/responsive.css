@@ -302,7 +302,7 @@
     }
     #menu #mainmenu-toggle:after {
         content: " ";
-        background: url('../image/png/menu-tog-icon.png') no-repeat;
+        background: url('../../../templates/image/png/menu-tog-icon.png') no-repeat;
         width: 30px;
         height: 30px;
         display: inline-block;

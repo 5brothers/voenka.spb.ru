@@ -3,7 +3,7 @@
         <div class="fotorama"
              data-nav="thumbs"
              data-thumbheight="60"
-             data-width="265"
+             data-width="350"
              data-allowfullscreen="true"
              data-swipe="true"
              data-autoplay="5000">
