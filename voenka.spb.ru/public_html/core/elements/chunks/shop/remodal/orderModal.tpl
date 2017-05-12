@@ -1,6 +1,6 @@
 {$_modx->runSnippet('!AjaxForm',[
     'snippet' => 'FormIt',
-    'hooks' => 'spam,email,clientMail,FormItSaveForm',
+    'hooks' => 'spam,email,FormItSaveForm,clientMail',
     'emailSubject' => 'Заказ товара',
     'emailTo' => $_modx->config.orderMail,
     'emailFrom' => $_modx->config.siteEmail,

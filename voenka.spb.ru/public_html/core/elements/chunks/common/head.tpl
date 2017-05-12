@@ -12,7 +12,7 @@
         <meta name="description" content="{$_modx->resource.description}" />
     {/if}
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    {$_modx->runSnippet('MinifyX',[
+    {$_modx->runSnippet('!MinifyX',[
         'minifyCss' => 1,
 	'minifyJs' => 1,
 	'registerJs' => 'default',

@@ -94,8 +94,12 @@
                 </form>
             </div>
         </div>
+            {var $commentsCount = $_modx->runSnippet('TicketMeta',[
+                'tpl' => '@INLINE {$comments}'
+            ])}
         <div id="tabs" class="htabs">
             <a href="#tab-description" class="selected">Описание</a>
+            <a href="#tab-reviews" class="">Отзывы ({$commentsCount})</a>
         </div>
         <div id="tab-container">
             <div id="tab-description" class="tab-content" style="display: block;">
@@ -104,6 +108,12 @@
                     {$_modx->resource.content}
                 </div>
             </div>
+               <div id="tab-reviews" class="tab-content" style="display: none;">
+               {$_modx->runSnippet('!TicketComments',[
+                    'allowGuest' => 1,
+                    'tplCommentFormGuest' => '@FILE:chunks/tickets/form.guest.tpl',
+                ])}
+                </div>
         </div>
         {var $tags=$_modx->runSnippet('!msOptions',[
                 'name' => 'tags',

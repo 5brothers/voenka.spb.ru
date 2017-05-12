@@ -508,6 +508,7 @@ a.button:hover, input.button:hover {
 	height: 30px;
 	line-height: 16px;
 	border-bottom: 1px solid #DDDDDD;
+        padding-top: 20px;
 }
 .htabs a {
 	border-top: 1px solid #DDDDDD;
@@ -523,7 +524,7 @@ a.button:hover, input.button:hover {
 	text-decoration: none;
 	color: #000000;
 	margin-right: 2px;
-	display: none;
+/*	display: none;*/
 }
 .htabs a.selected {
 	padding-bottom: 7px;
@@ -1241,9 +1242,11 @@ td.remove button, .cleancart{
 }
 
 .backToHistory{
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding-bottom: 20px;
     display: inline-block;
+    text-decoration: underline;
+    margin-right: 20px;
 }
 
 .pageContent{
@@ -1320,4 +1323,18 @@ input[type="text"][disabled="disabled"]{
 
 .jGrowl{
     z-index: 10002;
+}
+
+#comment-form input[type="text"],#comment-form textarea{
+    padding: 5px 10px;
+    background: #fff;
+    font-size: .875rem;
+    text-align: left;
+    border-radius: 3px;
+    margin-left: 5px;
+    border: 1px solid #676443;
+}
+
+#comment-editor{
+    width: 97%!important;
 }

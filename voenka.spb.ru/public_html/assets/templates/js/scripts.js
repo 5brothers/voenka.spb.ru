@@ -37,14 +37,29 @@ $(document).ready(function () {
     };
 
     $("#city").easyAutocomplete(options);
-
+    
+    $('.ajax_form button[type="submit"]').on('click',function(){
+       yaCounter23248333.reachGoal('getOrder');
+    });
+    $('button[value="cart/add"]').on('click',function(){
+       yaCounter23248333.reachGoal('toCart');
+    });
+    $('.htabs a').on('click',function(e){
+        e.preventDefault();
+        $('.htabs a').toggleClass('selected');
+        console.log('fe');
+        var tablink = $(this).attr('href');
+        $('.tab-content').hide();
+        $(tablink).show();
+    })
 });
 
 $(document).on('af_complete', function(event, response) {
     // Если у формы определённый id
-    console.log('должна закрыться');
+    if (response.success){    
     var inst = $('[data-remodal-id="orderModal"]').remodal();
     // Скрываем её!
     inst.close();
     // Иначе печатаем в консоль весь ответ
+    }
 });
