@@ -1,0 +1,91 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Plugins' => 
+    array (
+      '07b41086deb9e8d499ec96a349671e8a' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"msimportexport","description":"","editor_type":0,"category":0,"cache_type":0,"plugincode":"\\/** @var modX $modx *\\/\\nswitch ($modx->event->name) {\\n    case \'msieOnBeforePrepareImportProduct\':\\n        \\/\\/$modx->log(modX::LOG_LEVEL_ERROR, print_r($modx->event->params, 1));\\n        break;\\n    case \'msieOnEqualPageTitleImportProduct\':\\n        \\/\\/$modx->event->returnedValues[\'skip\'] = true; \\/\\/ \\u043f\\u0440\\u043e\\u043f\\u0443\\u0441\\u0442\\u0438\\u0442\\u044c \\u0438\\u043c\\u043f\\u043e\\u0440\\u0442 \\u0442\\u043e\\u0432\\u0430\\u0440\\u0430\\n        break;\\n    case \'msieOnBeforeImportProduct\':\\n        \\/\\/ $modx->event->params[\'destData\'][\'price\'] = 10;\\n        $modx->event->returnedValues[\'destData\'] = $modx->event->params[\'destData\'];\\n        \\/\\/$modx->log(modX::LOG_LEVEL_ERROR, print_r($modx->event->params, 1));\\n        \\/\\/$modx->event->output(\'Error\');\\n        \\/\\/$modx->event->returnedValues[\'skip\'] = true; \\/\\/ \\u043f\\u0440\\u043e\\u043f\\u0443\\u0441\\u0442\\u0438\\u0442\\u044c \\u0438\\u043c\\u043f\\u043e\\u0440\\u0442 \\u0442\\u043e\\u0432\\u0430\\u0440\\u0430\\n        break;\\n    case \'msieOnAfterImportProduct\':\\n        \\/\\/$modx->log(modX::LOG_LEVEL_ERROR, print_r($modx->event->params, 1));\\n        break;\\n    case \'msieOnCompleteImportProduct\':\\n        \\/\\/$modx->log(modX::LOG_LEVEL_ERROR, print_r($modx->event->params, 1));\\n        break;\\n    case \'msieOnBeforePrepareUpdateProduct\':\\n        \\/\\/$modx->log(modX::LOG_LEVEL_ERROR, print_r($modx->event->params, 1));\\n        break;\\n    case \'msieOnBeforeUpdateProduct\':\\n        \\/\\/$modx->log(modX::LOG_LEVEL_ERROR, print_r($modx->event->params, 1));\\n        break;\\n    case \'msieOnCompleteUpdateProduct\':\\n        \\/\\/$modx->log(modX::LOG_LEVEL_ERROR, print_r($modx->event->params, 1));\\n        break;\\n    case \'msieOnBeforeExport\':\\n        \\/\\/$modx->log(modX::LOG_LEVEL_ERROR, print_r($modx->event->params, 1));\\n        break;\\n    case \'msieOnCompleteExport\':\\n        \\/\\/$modx->log(modX::LOG_LEVEL_ERROR, print_r($modx->event->params, 1));\\n        break;\\n}","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"","content":"\\/** @var modX $modx *\\/\\nswitch ($modx->event->name) {\\n    case \'msieOnBeforePrepareImportProduct\':\\n        \\/\\/$modx->log(modX::LOG_LEVEL_ERROR, print_r($modx->event->params, 1));\\n        break;\\n    case \'msieOnEqualPageTitleImportProduct\':\\n        \\/\\/$modx->event->returnedValues[\'skip\'] = true; \\/\\/ \\u043f\\u0440\\u043e\\u043f\\u0443\\u0441\\u0442\\u0438\\u0442\\u044c \\u0438\\u043c\\u043f\\u043e\\u0440\\u0442 \\u0442\\u043e\\u0432\\u0430\\u0440\\u0430\\n        break;\\n    case \'msieOnBeforeImportProduct\':\\n        \\/\\/ $modx->event->params[\'destData\'][\'price\'] = 10;\\n        $modx->event->returnedValues[\'destData\'] = $modx->event->params[\'destData\'];\\n        \\/\\/$modx->log(modX::LOG_LEVEL_ERROR, print_r($modx->event->params, 1));\\n        \\/\\/$modx->event->output(\'Error\');\\n        \\/\\/$modx->event->returnedValues[\'skip\'] = true; \\/\\/ \\u043f\\u0440\\u043e\\u043f\\u0443\\u0441\\u0442\\u0438\\u0442\\u044c \\u0438\\u043c\\u043f\\u043e\\u0440\\u0442 \\u0442\\u043e\\u0432\\u0430\\u0440\\u0430\\n        break;\\n    case \'msieOnAfterImportProduct\':\\n        \\/\\/$modx->log(modX::LOG_LEVEL_ERROR, print_r($modx->event->params, 1));\\n        break;\\n    case \'msieOnCompleteImportProduct\':\\n        \\/\\/$modx->log(modX::LOG_LEVEL_ERROR, print_r($modx->event->params, 1));\\n        break;\\n    case \'msieOnBeforePrepareUpdateProduct\':\\n        \\/\\/$modx->log(modX::LOG_LEVEL_ERROR, print_r($modx->event->params, 1));\\n        break;\\n    case \'msieOnBeforeUpdateProduct\':\\n        \\/\\/$modx->log(modX::LOG_LEVEL_ERROR, print_r($modx->event->params, 1));\\n        break;\\n    case \'msieOnCompleteUpdateProduct\':\\n        \\/\\/$modx->log(modX::LOG_LEVEL_ERROR, print_r($modx->event->params, 1));\\n        break;\\n    case \'msieOnBeforeExport\':\\n        \\/\\/$modx->log(modX::LOG_LEVEL_ERROR, print_r($modx->event->params, 1));\\n        break;\\n    case \'msieOnCompleteExport\':\\n        \\/\\/$modx->log(modX::LOG_LEVEL_ERROR, print_r($modx->event->params, 1));\\n        break;\\n}"}',
+        'guid' => 'fff4039ea0593362d1f6dd0f91c1e42c',
+        'native_key' => NULL,
+        'signature' => 'a103e1ed0849ab01eea380f0554e41a6',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Plugins' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'PluginEvents' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => false,
+      'unique_key' => 
+      array (
+        0 => 'pluginid',
+        1 => 'event',
+      ),
+    ),
+  ),
+  'namespace' => 'msimportexport',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"msimportexport-1.3.6-beta\\/modCategory\\/314a16ea148291f64be4f14c2bfbb41c\\/0\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"msimportexport"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"msimportexport-1.3.6-beta\\/modCategory\\/314a16ea148291f64be4f14c2bfbb41c\\/1\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"msimportexport"}',
+    ),
+    2 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"msimportexport-1.3.6-beta\\/modCategory\\/314a16ea148291f64be4f14c2bfbb41c.resolve.tables.resolver","type":"php","name":"resolve.tables"}',
+    ),
+    3 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"msimportexport-1.3.6-beta\\/modCategory\\/314a16ea148291f64be4f14c2bfbb41c.resolve.settings.resolver","type":"php","name":"resolve.settings"}',
+    ),
+    4 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"msimportexport-1.3.6-beta\\/modCategory\\/314a16ea148291f64be4f14c2bfbb41c.package.resolver.resolver","type":"php","name":"package.resolver"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '7beffb55ed3eaab64a59cf26d363ca06',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '314a16ea148291f64be4f14c2bfbb41c',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"msImportExport","rank":0}',
+);

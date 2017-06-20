@@ -6,7 +6,7 @@
                 <i class="socIcon socVk"></i>
             </a>
             {if $_modx->config.instaLogin}
-            <a href="#" class="socLinks" target="_blank">
+            <a href="{$_modx->config.instaLogin}" class="socLinks" target="_blank">
                 <i class="socIcon socInsta"></i>
             </a>
             {/if}
@@ -40,3 +40,4 @@
         </div>
     </div>
 </div>
+{include 'file:chunks/common/cookies.tpl'}

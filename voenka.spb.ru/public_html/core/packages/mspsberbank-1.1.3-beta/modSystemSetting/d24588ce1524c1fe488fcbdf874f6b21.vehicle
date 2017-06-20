@@ -1,0 +1,15 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'dfac136b11f749d2269e6ee404503608',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'd24588ce1524c1fe488fcbdf874f6b21',
+  'native_key' => 'ms2_payment_sbrbnk_culture',
+  'object' => '{"key":"ms2_payment_sbrbnk_culture","value":"ru","xtype":"textfield","namespace":"minishop2","area":"ms2_payment","editedon":null}',
+);

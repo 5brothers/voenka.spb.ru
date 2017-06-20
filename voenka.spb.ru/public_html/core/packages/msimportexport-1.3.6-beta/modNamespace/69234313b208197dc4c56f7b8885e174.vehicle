@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'name',
+  'preserve_keys' => true,
+  'update_object' => true,
+  'namespace' => 'msimportexport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '3e5d872286f890faaa7996e528296792',
+  'package' => 'modx',
+  'class' => 'modNamespace',
+  'signature' => '69234313b208197dc4c56f7b8885e174',
+  'native_key' => 'msimportexport',
+  'object' => '{"name":"msimportexport","path":"{core_path}components\\/msimportexport\\/","assets_path":"{assets_path}components\\/msimportexport\\/"}',
+);

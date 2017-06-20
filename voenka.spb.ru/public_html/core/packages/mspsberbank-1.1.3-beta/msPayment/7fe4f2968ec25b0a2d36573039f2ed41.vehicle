@@ -1,0 +1,42 @@
+<?php return array (
+  'unique_key' => 'name',
+  'preserve_keys' => false,
+  'update_object' => false,
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"mspsberbank-1.1.3-beta\\/msPayment\\/7fe4f2968ec25b0a2d36573039f2ed41\\/0\\/","target":"return MODX_ASSETS_PATH . \'components\\/minishop2\\/payment\\/\';","name":"sberbank.php"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"mspsberbank-1.1.3-beta\\/msPayment\\/7fe4f2968ec25b0a2d36573039f2ed41\\/1\\/","target":"return MODX_CORE_PATH . \'components\\/minishop2\\/custom\\/payment\\/\';","name":"sberbank.class.php"}',
+    ),
+    2 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"mspsberbank-1.1.3-beta\\/msPayment\\/7fe4f2968ec25b0a2d36573039f2ed41\\/2\\/","target":"return MODX_CORE_PATH . \'components\\/minishop2\\/lexicon\\/en\\/\';","name":"msp.sberbank.inc.php"}',
+    ),
+    3 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"mspsberbank-1.1.3-beta\\/msPayment\\/7fe4f2968ec25b0a2d36573039f2ed41\\/3\\/","target":"return MODX_CORE_PATH . \'components\\/minishop2\\/lexicon\\/ru\\/\';","name":"msp.sberbank.inc.php"}',
+    ),
+    4 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"mspsberbank-1.1.3-beta\\/msPayment\\/7fe4f2968ec25b0a2d36573039f2ed41.resolve.settings.resolver","type":"php","name":"resolve.settings"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'c326a6b13681200a80811ec0e35c1048',
+  'package' => 'minishop2',
+  'class' => 'msPayment',
+  'signature' => '7fe4f2968ec25b0a2d36573039f2ed41',
+  'native_key' => NULL,
+  'object' => '{"id":null,"name":"Sberbank","description":null,"price":"0","logo":null,"rank":0,"active":0,"class":"Sberbank","properties":null}',
+);

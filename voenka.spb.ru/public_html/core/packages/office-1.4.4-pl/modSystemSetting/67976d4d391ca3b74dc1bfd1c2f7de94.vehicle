@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'office',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '44e4dbfa54a0744553f930a85d03859c',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '67976d4d391ca3b74dc1bfd1c2f7de94',
+  'native_key' => 'office_profile_required_fields',
+  'object' => '{"key":"office_profile_required_fields","value":"email,fullname","xtype":"textfield","namespace":"office","area":"office_profile","editedon":null}',
+);

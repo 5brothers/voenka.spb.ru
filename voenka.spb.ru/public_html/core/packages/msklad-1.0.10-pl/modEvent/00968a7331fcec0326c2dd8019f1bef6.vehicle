@@ -1,0 +1,15 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'namespace' => 'msklad',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'cda063bf0495a8424962aa86cdcf074b',
+  'package' => 'modx',
+  'class' => 'modEvent',
+  'signature' => '00968a7331fcec0326c2dd8019f1bef6',
+  'native_key' => 'mskladOnProductOffers',
+  'object' => '{"name":"mskladOnProductOffers","service":6,"groupname":"mSklad"}',
+);

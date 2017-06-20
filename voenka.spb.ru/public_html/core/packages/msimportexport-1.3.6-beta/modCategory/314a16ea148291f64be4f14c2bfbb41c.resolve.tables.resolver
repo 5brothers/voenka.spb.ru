@@ -1,0 +1,65 @@
+<?php
+$pkgName = 'msImportExport';
+$pkgNameLower = mb_strtolower($pkgName);
+if ($object->xpdo) {
+    $modx =& $object->xpdo;
+    $modelPath = $modx->getOption("{$pkgNameLower}.core_path", null, $modx->getOption('core_path') . "components/{$pkgNameLower}/") . 'model/';
+    $sqlPath = $modelPath . 'sql/';
+    $modx->addPackage($pkgNameLower, $modelPath);
+    $manager = $modx->getManager();
+    $tablePrefix = $manager->xpdo->config[xPDO::OPT_TABLE_PREFIX];
+    switch ($options[xPDOTransport::PACKAGE_ACTION]) {
+        case xPDOTransport::ACTION_INSTALL:
+            $manager->createObjectContainer('MsieHeadAlias');
+            $manager->createObjectContainer('MsiePresetsFields');
+            $manager->createObjectContainer('MsieCron');
+            execSql($modx, array(
+                $sqlPath . 'presetFields.sql',
+                $sqlPath . 'headAlias.sql',
+            ), $tablePrefix);
+            break;
+        case xPDOTransport::ACTION_UPGRADE:
+            $manager->createObjectContainer('MsieCron');
+            if (!$modx->getTableName('MsieHeadAlias')) {
+                $manager->createObjectContainer('MsiePresetsFields');
+                execSql($modx, array(
+                    $sqlPath . 'headAlias.sql',
+                ), $tablePrefix);
+            }
+            if (!$modx->getTableName('MsiePresetsFields')) {
+                $manager->createObjectContainer('MsiePresetsFields');
+                execSql($modx, array(
+                    $sqlPath . 'presetFields.sql',
+                ), $tablePrefix);
+            }
+
+            break;
+        case xPDOTransport::ACTION_UNINSTALL:/*
+			$manager->removeObjectContainer('MsieHeadAlias');
+			$manager->removeObjectContainer('MsiePresetsFields');*/
+            break;
+    }
+}
+
+/**
+ * @param $modx
+ * @param array $files
+ * @param string $tablePrefix
+ */
+function execSql(&$modx, $files = array(), $tablePrefix = '')
+{
+    foreach ($files as $file) {
+        if (file_exists($file)) {
+            if ($sql = file_get_contents($file)) {
+                $sql = str_replace("%table_prefix%", $tablePrefix, $sql);
+                $modx->exec($sql);
+            } else {
+                $modx->log(modX::LOG_LEVEL_ERROR, '[msImportExport]  sql file empty ' . $file);
+            }
+        } else {
+            $modx->log(modX::LOG_LEVEL_ERROR, '[msImportExport] not find sql file: ' . $file);
+        }
+    }
+}
+
+return true;

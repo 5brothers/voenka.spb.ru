@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'msklad',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '27750333eaaf1ea0e3623a437a940fc9',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '145de1e0c2325fa7f7050ff4bd4e7c71',
+  'native_key' => 'msklad_order_accept_status_id',
+  'object' => '{"key":"msklad_order_accept_status_id","value":"","xtype":"numberfield","namespace":"msklad","area":"msklad_1c","editedon":null}',
+);

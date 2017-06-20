@@ -1,0 +1,15 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '7d92bcc1386ab09edbff4dd24cb45e15',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'e6fdbee84cb6c92d112136344be4bc30',
+  'native_key' => 'ms2_payment_sbrbnk_url',
+  'object' => '{"key":"ms2_payment_sbrbnk_url","value":"https:\\/\\/3dsec.sberbank.ru\\/payment\\/rest\\/","xtype":"textfield","namespace":"minishop2","area":"ms2_payment","editedon":null}',
+);

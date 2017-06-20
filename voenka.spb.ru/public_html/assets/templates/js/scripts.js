@@ -35,7 +35,13 @@ $(document).ready(function () {
         },
         getValue: "full"
     };
-
+    if (!localStorage.cookies){
+        $('.cookies').show('fast');
+    }
+    $('.cookies .fa-close').on('click',function(){
+       $('.cookies').hide('fast');
+       localStorage.setItem('cookies', 'yep')
+    });
     $("#city").easyAutocomplete(options);
     
     $('.ajax_form button[type="submit"]').on('click',function(){

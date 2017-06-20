@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'office',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '9ee0dde62ba470be4133eaffef3a15ba',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '62c03ced88c91fed67216a797fb207e9',
+  'native_key' => 'office_sanitize_pcre',
+  'object' => '{"key":"office_sanitize_pcre","value":"\\/[^-_0-9\\\\p{L}\\\\s@.,:\\\\\\/\\\\+()]+\\/iu","xtype":"textfield","namespace":"office","area":"office_main","editedon":null}',
+);

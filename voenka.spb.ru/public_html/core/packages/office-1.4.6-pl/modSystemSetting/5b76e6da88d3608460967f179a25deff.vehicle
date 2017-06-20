@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'office',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '4c97383716b42c524e9655a2ad5bce2c',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '5b76e6da88d3608460967f179a25deff',
+  'native_key' => 'office_ms2_date_format',
+  'object' => '{"key":"office_ms2_date_format","value":"%d.%m.%y <small>%H:%M<\\/small>","xtype":"textfield","namespace":"office","area":"office_ms2","editedon":null}',
+);

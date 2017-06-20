@@ -1,0 +1,15 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '0f2e1e667dbdce8d467ba7a20f716cc1',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '1034df3e42a73766ba0f9648ae7db98b',
+  'native_key' => 'ms2_payment_sbrbnk_pass',
+  'object' => '{"key":"ms2_payment_sbrbnk_pass","value":"5hdwIOaLPJqz","xtype":"text-password","namespace":"minishop2","area":"ms2_payment","editedon":null}',
+);

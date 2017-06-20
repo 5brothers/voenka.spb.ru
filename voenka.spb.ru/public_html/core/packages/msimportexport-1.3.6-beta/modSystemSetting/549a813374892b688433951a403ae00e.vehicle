@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => 'BUILD_SETTING_UPDATE',
+  'namespace' => 'msimportexport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '628774913766180bc5f220f2eebb0a16',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '549a813374892b688433951a403ae00e',
+  'native_key' => 'msimportexport.import.remove_limit',
+  'object' => '{"key":"msimportexport.import.remove_limit","value":"1000","xtype":"textfield","namespace":"msimportexport","area":"import","editedon":"0000-00-00 00:00:00"}',
+);

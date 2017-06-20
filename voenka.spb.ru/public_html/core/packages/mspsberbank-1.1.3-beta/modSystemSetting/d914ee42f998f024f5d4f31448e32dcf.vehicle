@@ -1,0 +1,15 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'dc4d355ae22f9d598e17992c2e604c85',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'd914ee42f998f024f5d4f31448e32dcf',
+  'native_key' => 'ms2_payment_sbrbnk_currency',
+  'object' => '{"key":"ms2_payment_sbrbnk_currency","value":"643","xtype":"textfield","namespace":"minishop2","area":"ms2_payment","editedon":null}',
+);

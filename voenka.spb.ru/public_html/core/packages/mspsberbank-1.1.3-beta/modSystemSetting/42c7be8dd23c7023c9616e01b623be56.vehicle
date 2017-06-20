@@ -1,0 +1,15 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '56a940e5994b77e45c2d3b92c08a1f1f',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '42c7be8dd23c7023c9616e01b623be56',
+  'native_key' => 'ms2_payment_sbrbnk_success_id',
+  'object' => '{"key":"ms2_payment_sbrbnk_success_id","value":0,"xtype":"numberfield","namespace":"minishop2","area":"ms2_payment","editedon":null}',
+);

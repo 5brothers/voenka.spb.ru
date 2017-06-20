@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'msearch2',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '2ed01008715aa0262db94036b8846929',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '936a0a1a025c711472992c193b90688d',
+  'native_key' => 'mse2_search_split_words',
+  'object' => '{"key":"mse2_search_split_words","value":"#\\\\s#u","xtype":"textfield","namespace":"msearch2","area":"mse2_search","editedon":null}',
+);

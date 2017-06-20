@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => 'BUILD_SETTING_UPDATE',
+  'namespace' => 'msimportexport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '857ecffde521619f55c7f7ba9e6ebde1',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '1879f5b70fe27010c5e4e3ab003f2e59',
+  'native_key' => 'msimportexport.import.sub_delimeter2',
+  'object' => '{"key":"msimportexport.import.sub_delimeter2","value":"%","xtype":"textfield","namespace":"msimportexport","area":"import","editedon":"2016-05-11 16:18:10"}',
+);

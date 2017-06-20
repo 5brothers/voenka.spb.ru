@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => 'BUILD_SETTING_UPDATE',
+  'namespace' => 'msimportexport',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '5eaf0cf64d84f0088709769233958d6f',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'aac73f834ea7370650800b186df24574',
+  'native_key' => 'msimportexport.export.format_date',
+  'object' => '{"key":"msimportexport.export.format_date","value":"%m\\/%d\\/%Y %T","xtype":"textfield","namespace":"msimportexport","area":"export CSV","editedon":"2016-01-02 01:36:12"}',
+);

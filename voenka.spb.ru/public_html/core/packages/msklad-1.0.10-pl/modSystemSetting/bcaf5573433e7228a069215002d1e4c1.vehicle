@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'msklad',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '6090cf0da345aef083e7d10ab25c06bf',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'bcaf5573433e7228a069215002d1e4c1',
+  'native_key' => 'msklad_time_limit',
+  'object' => '{"key":"msklad_time_limit","value":"60","xtype":"textfield","namespace":"msklad","area":"msklad_1c","editedon":null}',
+);

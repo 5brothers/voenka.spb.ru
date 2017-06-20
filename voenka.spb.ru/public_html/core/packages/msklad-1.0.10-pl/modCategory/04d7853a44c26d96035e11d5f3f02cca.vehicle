@@ -1,0 +1,140 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Plugins' => 
+    array (
+      'eb5ad2a5af9ac8b101bbb6c197934bb9' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":1,"property_preprocess":0,"name":"removeUuid","description":"mSklad plugin for delete resource 1c uuid","editor_type":0,"category":0,"cache_type":0,"plugincode":"if ($modx->event->name == \'OnBeforeEmptyTrash\') {\\n    $mSklad = $modx->getService(\'msklad\',\'mSklad\', $modx->getOption(\'core_path\').\'components\\/msklad\\/model\\/msklad\\/\');\\n    $mSklad->initialize($modx->context->key);\\n\\n    $deletedids = $modx->event->params[\'ids\'];\\n    foreach ($deletedids as $resourceid) {\\n        if( $category = $modx->getObject( \'mSkladCategoryData\', array(\'category_id\' => $resourceid)) ){\\n            $category->remove();\\n        }\\n        if( $product = $modx->getObject( \'mSkladProductData\', array(\'product_id\' => $resourceid)) ){\\n            $product->remove();\\n        }\\n    }\\n}\\nreturn;","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"core\\/components\\/msklad\\/elements\\/plugins\\/plugin.delete_resource_uuid.php","content":"if ($modx->event->name == \'OnBeforeEmptyTrash\') {\\n    $mSklad = $modx->getService(\'msklad\',\'mSklad\', $modx->getOption(\'core_path\').\'components\\/msklad\\/model\\/msklad\\/\');\\n    $mSklad->initialize($modx->context->key);\\n\\n    $deletedids = $modx->event->params[\'ids\'];\\n    foreach ($deletedids as $resourceid) {\\n        if( $category = $modx->getObject( \'mSkladCategoryData\', array(\'category_id\' => $resourceid)) ){\\n            $category->remove();\\n        }\\n        if( $product = $modx->getObject( \'mSkladProductData\', array(\'product_id\' => $resourceid)) ){\\n            $product->remove();\\n        }\\n    }\\n}\\nreturn;"}',
+        'guid' => 'f255bba9e16ed6bffc0e49bdbb519941',
+        'native_key' => NULL,
+        'signature' => '7e2ebcb241ea856f55a5b46d439990c7',
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            '8a72e7bd8f4fc5ced9166edb1086880b' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnBeforeEmptyTrash","priority":0,"propertyset":0}',
+              'guid' => '394a2fb8f3289cf33f8064e4c0e581ca',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnBeforeEmptyTrash',
+              ),
+              'signature' => '778978cad13a102fa79a6022e1219b00',
+            ),
+          ),
+        ),
+      ),
+      '176529dc9368968796ac0c828c1952ab' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":1,"property_preprocess":0,"name":"providerSetting","description":"mSklad plugin for settings page","editor_type":0,"category":0,"cache_type":0,"plugincode":"switch($modx->event->name) {\\n    case \'OnSiteSettingsRender\':\\n        $modx->controller->addLexiconTopic(\'msklad:default\');\\n        $modx->controller->addHtml(\'<script type=\\"text\\/javascript\\">\\n                \\/\\/ This a demo combo, instead use your own with your processor to load your \\"options\\"\\n                var mskladDirectionXtype = function(config) {\\n                    Ext.apply(config, {\\n                        store: new Ext.data.SimpleStore({\\n                            fields: [\\"data\\",\\"value\\"]\\n                            ,data: [\\n                                [_(\\\\\'msklad_sync_direction_ms2_to_service\\\\\'), \\"0\\"]\\n                                ,[_(\\\\\'msklad_sync_direction_service_to_ms2\\\\\'), \\"1\\"]\\n                            ]\\n                        })\\n                        ,displayField: \\"data\\"\\n                        ,valueField: \\"value\\"\\n                        ,mode: \\"local\\"\\n                    });\\n                    mskladDirectionXtype.superclass.constructor.call(this, config);\\n                };\\n                Ext.extend(mskladDirectionXtype, MODx.combo.ComboBox);\\n                Ext.reg(\\"msklad-combo-direction\\", mskladDirectionXtype);\\n\\n                Ext.onReady(function() {\\n                    Ext.override(MODx.combo.xType, {\\n                        listeners: {\\n                            afterRender: {\\n                                fn: function(elem) {\\n                                    var store = elem.getStore();\\n                                    \\/\\/ Add your custom xtype(s)\\n                                    var newXtypes = [\\n                                        new Ext.data.Record({\\n                                            d: \\"mSklad sync direction\\"\\n                                            ,v: \\"msklad-combo-direction\\"\\n                                        })\\n                                    ];\\n                                    store.add(newXtypes);\\n                                }\\n                                ,scope: this\\n                            }\\n                        }\\n                    });\\n            });\\n            <\\/script>\');\\n        break;\\n}\\n\\nreturn;","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"core\\/components\\/msklad\\/elements\\/plugins\\/plugin.sync_direction.php","content":"switch($modx->event->name) {\\n    case \'OnSiteSettingsRender\':\\n        $modx->controller->addLexiconTopic(\'msklad:default\');\\n        $modx->controller->addHtml(\'<script type=\\"text\\/javascript\\">\\n                \\/\\/ This a demo combo, instead use your own with your processor to load your \\"options\\"\\n                var mskladDirectionXtype = function(config) {\\n                    Ext.apply(config, {\\n                        store: new Ext.data.SimpleStore({\\n                            fields: [\\"data\\",\\"value\\"]\\n                            ,data: [\\n                                [_(\\\\\'msklad_sync_direction_ms2_to_service\\\\\'), \\"0\\"]\\n                                ,[_(\\\\\'msklad_sync_direction_service_to_ms2\\\\\'), \\"1\\"]\\n                            ]\\n                        })\\n                        ,displayField: \\"data\\"\\n                        ,valueField: \\"value\\"\\n                        ,mode: \\"local\\"\\n                    });\\n                    mskladDirectionXtype.superclass.constructor.call(this, config);\\n                };\\n                Ext.extend(mskladDirectionXtype, MODx.combo.ComboBox);\\n                Ext.reg(\\"msklad-combo-direction\\", mskladDirectionXtype);\\n\\n                Ext.onReady(function() {\\n                    Ext.override(MODx.combo.xType, {\\n                        listeners: {\\n                            afterRender: {\\n                                fn: function(elem) {\\n                                    var store = elem.getStore();\\n                                    \\/\\/ Add your custom xtype(s)\\n                                    var newXtypes = [\\n                                        new Ext.data.Record({\\n                                            d: \\"mSklad sync direction\\"\\n                                            ,v: \\"msklad-combo-direction\\"\\n                                        })\\n                                    ];\\n                                    store.add(newXtypes);\\n                                }\\n                                ,scope: this\\n                            }\\n                        }\\n                    });\\n            });\\n            <\\/script>\');\\n        break;\\n}\\n\\nreturn;"}',
+        'guid' => '0eca9448c7198ae664ba140c6414b45a',
+        'native_key' => NULL,
+        'signature' => 'e5b4494a39dca230e9fc6c90cff32298',
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            '2d42eb569db412d2a2172791c3b75530' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnSiteSettingsRender","priority":0,"propertyset":0}',
+              'guid' => '2f3ddc1fa997852b0c2114dbb89a8d06',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnSiteSettingsRender',
+              ),
+              'signature' => '5fe619ede4d4af0b58f648349742d9d4',
+            ),
+          ),
+        ),
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Plugins' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'PluginEvents' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'pluginid',
+        1 => 'event',
+      ),
+    ),
+  ),
+  'namespace' => 'msklad',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"msklad-1.0.10-pl\\/modCategory\\/04d7853a44c26d96035e11d5f3f02cca\\/0\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"msklad"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"msklad-1.0.10-pl\\/modCategory\\/04d7853a44c26d96035e11d5f3f02cca\\/1\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"msklad"}',
+    ),
+    2 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"msklad-1.0.10-pl\\/modCategory\\/04d7853a44c26d96035e11d5f3f02cca.resolve.tables.resolver","type":"php","name":"resolve.tables"}',
+    ),
+    3 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"msklad-1.0.10-pl\\/modCategory\\/04d7853a44c26d96035e11d5f3f02cca.resolve.settings.resolver","type":"php","name":"resolve.settings"}',
+    ),
+    4 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"msklad-1.0.10-pl\\/modCategory\\/04d7853a44c26d96035e11d5f3f02cca.resolve.setup.resolver","type":"php","name":"resolve.setup"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '5757aee2bc2569217ffd0f8acfc13af6',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '04d7853a44c26d96035e11d5f3f02cca',
+  'native_key' => NULL,
+  'object' => '{"id":null,"parent":0,"category":"mSklad"}',
+);

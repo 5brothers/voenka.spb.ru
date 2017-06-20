@@ -1,5 +1,5 @@
 <div class="box">
-    <div class="box-heading">Последние поступления</div>
+    <div class="box-heading box-heading_second-heading">Последние поступления</div>
     <div class="box-content productsOuter">
         <div class="box-product">
             {$_modx->runSnippet('msProducts',[

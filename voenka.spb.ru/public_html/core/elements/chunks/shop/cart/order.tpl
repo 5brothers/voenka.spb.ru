@@ -100,6 +100,10 @@
             <p class="control-label">Итого: <span id="ms2_order_cost">{$order.cost ?: 0}</span>
                     р.</p>
             <div>
+                {$_modx->getChunk('@FILE:chunks/common/politics.tpl', [
+                'button' => 'Сделать заказ'
+                ])}
+                <p></p>
                  <button type="submit" name="ms2_action" value="order/submit" class="btn-success ms2_link">
                     <i class="fa fa-check"></i> {'ms2_frontend_order_submit' | lexicon}
                 </button>

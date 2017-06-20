@@ -10,6 +10,9 @@
           <input type="text" name="tushenka" value="" class="tushenka">
           <textarea name="comment" class="form-control" id="comment" cols="30" rows="10" placeholder="Дополнительный вопрос или комментарий"></textarea>
           <button type="submit">Оформить заказ</button>
+            {$_modx->getChunk('@FILE:chunks/common/politics.tpl', [
+                'button' => 'Оформить заказ'
+            ])}
       </div>
   </form>
 </div>
