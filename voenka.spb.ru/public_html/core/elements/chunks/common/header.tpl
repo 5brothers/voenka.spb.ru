@@ -18,6 +18,11 @@
                 <i class="socIcon socInsta"></i>
             </a>
             {/if}
+            {if $_modx->config.okLogin?}
+            <a href="https://ok.ru/{$_modx->config.okLogin}" class="socLinks" title="Военка в Одноклассниках" target="_blank">
+                <i class="fa fa-odnoklassniki"></i>
+            </a>    
+            {/if}
             <a href="{$_modx->makeUrl(510)}" class="socLinks account" title="Личный кабинет">
                 <i class="fa fa-user-circle"></i>
             </a>
