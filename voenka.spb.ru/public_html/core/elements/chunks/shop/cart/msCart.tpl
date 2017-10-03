@@ -65,20 +65,33 @@
                     </tr>
                 {/foreach}
             </table>
-{*            <table>
+            <table>
                 <tr class="footer">
                     <th class="total" colspan="2">{'ms2_cart_total' | lexicon}:</th>
                     <th class="total_count">
-                        <span class="ms2_total_count">{$total.count}</span>
-                        {'ms2_frontend_count_unit' | lexicon}
+                        Количество: 
+                        <strong>
+                            <span class="ms2_total_count">{$total.count}</span>
+                            {'ms2_frontend_count_unit' | lexicon}
+                        </strong>
                     </th>
                     <th class="total_cost">
+                        Стоимость:
                         <span class="ms2_total_cost">{$total.cost}</span>
-                        {'ms2_frontend_currency' | lexicon}
+                        {'ms2_frontend_currency' | lexicon} 
                     </th>
+                    {if $total_weight>0}
+                    <th class="total_weight">
+                         Суммарный вес: 
+                         <strong>
+                        <span class="ms2_total_weight">{$total.weight}</span>
+                        {'ms2_frontend_weight_unit' | lexicon}
+                        </strong>
+                    </th>
+                    {/if}
                     <th>&nbsp;</th>
                 </tr>
-            </table>*}
+            </table>
         </div>
     {/if}
 </div>

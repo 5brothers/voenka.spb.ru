@@ -1007,7 +1007,11 @@
     .priceValue{
         font-size: 1.625rem;
     }
-
+    
+    .weightLink{
+        text-decoration: underline;
+    }
+    
     .product-info .cart{
         border-bottom: 1px solid #e7e7e7;
         padding: 0 5px 10px 5px;

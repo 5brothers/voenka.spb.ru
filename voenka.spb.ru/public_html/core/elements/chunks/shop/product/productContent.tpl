@@ -1,3 +1,4 @@
+[[!msOptionsPrice.initialize?]]
 <div id="content" itemscope itemtype="http://schema.org/Product">
     <div id="msProduct">
         <h1 class="productTitle" itemprop="name">{$_modx->resource.pagetitle}</h1>
@@ -9,7 +10,7 @@
                 ])}
             </div>
             <div class="right" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                <form class="form-horizontal ms2_form" method="post">
+                <form class="form-horizontal ms2_form msoptionsprice-product" method="post">
                     <div class="productProperites">
                         <div class="form-group">
                             <label class="col-md-2">Категория: [[#[[#[[*id]].parent]].pagetitle]]</label>
@@ -19,9 +20,11 @@
                                 <label class="col-md-2">{$_modx->lexicon('ms2_product_article')}: {$article}</label>
                             </div>
                         {/if}
+                        {if $status?}
                         <div class="form-group">
                             <label class="col-md-2">Состояние: {$status}</label>
                         </div>
+                        {/if}
                         {if $made_in}
                             <div class="form-group">
                                 <label class="col-md-2">{$_modx->lexicon('ms2_product_made_in')}: {$made_in}</label>
@@ -32,11 +35,27 @@
                                 <label class="col-md-2">{$_modx->lexicon('ms2_product_vendor')}: {$_modx->getPlaceholder('vendor.name')}</label>
                             </div>
                         {/if}
+                        {if $weight>0}
+                            <div class="form-group">
+                                <label class="col-md-2">{$_modx->lexicon('ms2_product_weight')}: {$weight}</label>
+                                <p>
+                                    <strong>
+                                        <a target="blank" class="weightLink" rel="nofollow" title="Расчет стоимости доставки" href="http://www.postcalc.ru/">Расчет стоимости доставки по весу</a>
+                                    </strong>
+                                </p>
+                            </div>
+                        {/if}
+                        {$count}
+                        {if $quantity>0}
+                            <div class="form-group">
+                                <label class="col-md-2">{$_modx->lexicon('ms2_product_quantity')}: {$quantity}</label>
+                            </div>
+                        {/if}
                         <div class="price">
                              {if $old_price?}
                                 <span class="oldprice">{$old_price}</span>    
                               {/if}
-                            <span class="priceValue" itemprop="price">{$price}</span> руб.
+                            <span class="priceValue msoptionsprice-cost msoptionsprice-{$_modx->resource.id}" itemprop="price">{$price}</span> руб.
                         </div>
                         <span class="hidden" itemprop="priceCurrency">
                             RUB

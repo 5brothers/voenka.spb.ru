@@ -10,21 +10,27 @@ $pdo = $modx->getService('pdoTools');
 //}
 // Сниппет будет обрабатывать не один вид запросов, поэтому работать будем по запрашиваемому действию
 // Если в массиве POST нет действия - выход
-if (!empty($_GET['action'])) {
-    switch ($_GET['action']) {
+if (!empty($_REQUEST['action'])) {
+    switch ($_REQUEST['action']) {
         case 'getCity':
             $res = $pdo->runSnippet('getCity',array(
-                'words' => $_GET['words'],
+                'words' => $_REQUEST['words'],
             ));
+            $res = json_encode($res);
+            break;
+        case 'sms':
+            $res = $pdo->runSnippet('@FILE:snippets/sendSms.php',[
+                'phone' => $_REQUEST['phone'],
+                'text' => $_REQUEST['text']
+            ]);
             break;
     }
-} elseif (!empty($_POST['action'])){
+} elseif (!empty($_REQUEST['action'])){
     return;
 } else {
     return;
 }
 if (!empty($res)) {
-    $res = json_encode($res);
     die($res);
 }
     
