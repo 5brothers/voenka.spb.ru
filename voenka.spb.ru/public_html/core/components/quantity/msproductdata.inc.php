@@ -2,20 +2,20 @@
 
 return array(
     'fields' => array(
-        'avail' => NULL
+        'quantity' => NULL
     )
     , 'fieldMeta' => array(
-        'avail' => array(
-            'dbtype' => 'varchar'
-            , 'precision' => '50'
-            , 'phptype' => 'string'
+        'quantity' => array(
+            'dbtype' => 'int'
+            , 'precision' => '10'
+            , 'phptype' => 'integer'
             , 'null' => true
             , 'default' => NULL
         )
     )
     , 'indexes' => array(
-        'avail' => array(
-            'alias' => 'avail'
+        'quantity' => array(
+            'alias' => 'quantity'
             , 'primary' => false
             , 'unique' => false
             , 'type' => 'BTREE'
